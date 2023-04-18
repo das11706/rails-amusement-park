@@ -1,31 +1,30 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
 
 <%= form_for(@user) do |f| %>
 
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
 
-  <%= f.label :height %><br>
-  <%= f.text_field :height %>
+  <%= f.label :height %>
+  <%= f.text_field :height %><br>
 
-  <%= f.label :happiness %><br>
-  <%= f.text_field :happiness %>
+  <%= f.label :happiness %>
+  <%= f.text_field :happiness %><br>
 
-  <%= f.label :nausea %><br>
-  <%= f.text_field :nausea %>
+  <%= f.label :nausea %>
+  <%= f.text_field :nausea %><br>
 
-  <%= f.label :tickets %><br>
-  <%= f.text_field :tickets %>
+  <%= f.label :tickets %>
+  <%= f.text_field :tickets %><br>
 
-  <%= f.label :admin %><br>
-  <%= f.check_box :admin %>
+  <%= f.label :admin %>
+  <%= f.check_box :admin %><br>
 
-  <%= f.label :password %><br>
-  <%= f.text_field :password %>
+  <%= f.label :password %>
+  <%= f.text_field :password %><br>
 
-  <%= f.label :password_confirmation %><br>
-  <%= f.password_field :password_confirmation %>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %><br>
 
   <%= f.submit "Create User" %>
 <% end %>
