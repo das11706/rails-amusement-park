@@ -1,0 +1,13 @@
+<h1>Attractions#show</h1>
+<p>Find me in app/views/attractions/show.html.erb</p>
+
+
+<% if current_user.admin %>
+  <p><%= link_to "Edit Attraction", [:edit, @attraction] %></p>
+<% else %>
+  <%= form_for(@ride) do |f| %>
+    <%= f.hidden_field :user_id %><br>
+    <%= f.hidden_field :attraction_id %><br>
+    <%= f.submit "Go on this ride" %>
+  <% end %>
+<% end %>
