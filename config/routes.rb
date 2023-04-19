@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'static#home'
   # resources :users
-  get '/users/new', to: 'users#new'
+  get '/users/new', to: 'users#new', as: 'new_user'
   get '/users/', to: 'users#index'
   post '/users', to: 'users#create'
   get '/users/:id', to: 'users#show', as: 'user'
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/attractions/new' => 'attractions#new', as: 'new_attraction'
   get '/attractions/:id' => 'attractions#show', as: 'attraction'
   post '/attractions' => 'attractions#create'
-  get '/attractions/:id/edit' => 'attractions#edit'
+  get '/attractions/:id/edit' => 'attractions#edit', as: 'edit_attraction'
   patch '/attractions/:id' => 'attractions#update'
   post '/rides' => 'rides#create'
 
