@@ -15,17 +15,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # def create
-  #   if (user = User.create(user_params))
-  #     session[:user_id] = user.id
-  #     redirect_to user_path(user)
-  #   else
-  #     render 'new'
-  #   end
-  # end
-
   def show
-    # @user = User.find_by(id: params[:id])
     @user = User.find(params[:id])
   end
 
@@ -35,10 +25,4 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :nausea, :happiness, :tickets, :height, :admin, :password)
     end
 
-    # def require_login
-    #   unless current_user
-    #     flash[:error] = "You must be logged in to access this section"
-    #     redirect_to '/'
-    #   end
-    # end
 end
