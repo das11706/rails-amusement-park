@@ -6,8 +6,6 @@ class RidesController < ApplicationController
     redirect_to user_path(ride.user), flash: {message: message}
   end
 
-
-
   private
 
   def ride_params
